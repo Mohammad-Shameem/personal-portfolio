@@ -27,17 +27,19 @@ const Projects = () => {
             showStatus={false}
             showThumbs={false}
           >
-            {projectsData.map((i, index) => (
-              <div key={index} className="projects-item">
-                <img src={i.img} alt={i.title}></img>
-                <aside>
-                  <h3>{i.title}</h3>
-                  <a target={"_blank"} rel={"noreferrer"} href={i.live}>
-                    View Demo
-                  </a>
-                </aside>
-              </div>
-            ))}
+            {projectsData.length > 0
+              ? projectsData.map((i, index) => (
+                  <div key={index} className="projects-item">
+                    <img src={i.img} alt={i.title}></img>
+                    <aside>
+                      <h3>{i.title}</h3>
+                      <a target={"_blank"} rel={"noreferrer"} href={i.live}>
+                        View Demo
+                      </a>
+                    </aside>
+                  </div>
+                ))
+              : ""}
           </Carousel>
         </article>
       </section>

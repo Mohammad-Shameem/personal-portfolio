@@ -15,7 +15,7 @@ const Timeline = () => {
       <div className="timelineBox">
         {timelineData.map((i, index) => (
           <TimelineItem
-            key={index}
+            key={i.id}
             heading={i.name}
             text={i.date}
             index={index}
