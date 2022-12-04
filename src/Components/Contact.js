@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import vg from "../assets/vg.png";
 import { BiMailSend } from "react-icons/bi";
+import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
 const Contact = () => {
@@ -15,10 +16,33 @@ const Contact = () => {
 
     return false; //for not reload after submit
   };
+  const animations = {
+    form: {
+      whileInView: {
+        x: 0,
+        opacity: 1,
+      },
+      initial: {
+        x: -100,
+        opacity: 0,
+      },
+    },
+    button: {
+      whileInView: {
+        y: 0,
+        opacity: 1,
+      },
+      initial: {
+        y: -100,
+        opacity: 0,
+      },
+      transition: { duration: 0.5 },
+    },
+  };
   return (
     <div id="contact">
       <section>
-        <form onSubmit={handleSubmit}>
+        <motion.form onSubmit={handleSubmit} {...animations.form}>
           <h2>Contact Me</h2>
           <input
             type="text"
@@ -44,10 +68,10 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           ></input>
-          <button type="submit">
+          <motion.button type="submit" {...animations.button}>
             Send <BiMailSend />
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </section>
       <aside>
         <img src={vg} alt="contact-grapic"></img>
