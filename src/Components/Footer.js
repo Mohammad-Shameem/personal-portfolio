@@ -36,7 +36,7 @@ const Footer = () => {
       </a>
       <span>
         <a href="mailto:shameemahmad.sa7@gmail.com">
-          <button className="email-btn">Email</button>
+          <button>Email</button>
         </a>
       </span>
     </footer>
