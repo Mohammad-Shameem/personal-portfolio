@@ -19,8 +19,12 @@ const NavContent = () => {
         <a href="#testimonial">Testimonial</a>
         <a href="#contact">Contact</a>
       </div>
-      <a href="mailto:shameemahmad.sa7@gmail.com">
-        <button>Email</button>
+      <a
+        href="https://drive.google.com/file/d/1KYAwn0DYzaGb3x0vZM1TN0g-bfG4wDw4/view?usp=share_link"
+        target={"blank"}
+        download
+      >
+        <button>Resume</button>
       </a>
     </>
   );

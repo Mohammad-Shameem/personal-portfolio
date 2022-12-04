@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Timeline = () => {
   const [timelineData, setTimelineData] = useState([]);
@@ -26,16 +27,38 @@ const Timeline = () => {
   );
 };
 const TimelineItem = ({ heading, text, index }) => {
+  const animation = {
+    whileInView: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+    },
+    odd: {
+      opacity: 0,
+      x: 500,
+    },
+    even: {
+      opacity: 0,
+      x: -300,
+    },
+  };
   return (
     <div
       className={`timelineItem ${
         index % 2 === 0 ? "leftTimeline" : "rightTimeline"
       }`}
     >
-      <div>
-        <h2>{heading}</h2>
-        <p>{text}</p>
-      </div>
+      <motion.div
+        whileInView={animation.whileInView}
+        initial={index % 2 === 0 ? animation.even : animation.odd}
+        // transition={index % 2 === 0 ? { delay: 0.2 } : { delay: 0.3 }}
+        transition={{ ease: "easeIn", duration: 0.5 }}
+      >
+        <div>
+          <h2>{heading}</h2>
+          <p>{text}</p>
+        </div>
+      </motion.div>
     </div>
   );
 };
