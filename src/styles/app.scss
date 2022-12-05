@@ -11,6 +11,7 @@
 @import "./contact.scss";
 @import "./footer.scss";
 @import "./mediaquery.scss";
+@import "./slickSlider.scss";
 
 * {
     margin: 0%;
@@ -29,7 +30,7 @@
   
   body {
     background-color: $color1;
-    overflow-x: hidden;
+    overflow-x: hidden ;
   }
   
   .disableBtn {

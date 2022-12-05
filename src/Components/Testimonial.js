@@ -1,4 +1,5 @@
 import React from "react";
+import SlickSlider from "./SlickSlider";
 
 const Testimonials = () => {
   return (
@@ -18,6 +19,7 @@ const Testimonials = () => {
           feedback={"Try to learn some animations."}
         ></TestimonialCard>
       </section>
+      <SlickSlider></SlickSlider>
     </div>
   );
 };

@@ -10,7 +10,8 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       await addDoc(collection(dataBase, "contacts"), {
         name,
@@ -25,8 +26,6 @@ const Contact = () => {
       toast.error("Internal Error");
       console.log(error);
     }
-
-    return false; //for not reload after submit
   };
   const animations = {
     form: {
