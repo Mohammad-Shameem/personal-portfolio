@@ -12,7 +12,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div id="experience">
+    <div id="timeline">
       <div className="timelineBox">
         {timelineData.map((i, index) => (
           <TimelineItem
@@ -35,7 +35,7 @@ const TimelineItem = ({ heading, text, index }) => {
     },
     odd: {
       opacity: 0,
-      x: 500,
+      x: 200,
     },
     even: {
       opacity: 0,

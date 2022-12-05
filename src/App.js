@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import Header from "./Components/Header";
+import Header, { HeaderPhone } from "./Components/Header";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Services from "./Components/Services";
@@ -10,9 +11,15 @@ import Timeline from "./Components/Timeline";
 
 import "./styles/app.scss";
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <>
-      <Header />
+    <div
+      style={{
+        overflowX: "hidden",
+      }}
+    >
+      <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home />
       <Projects />
       <Timeline />
@@ -21,7 +28,7 @@ function App() {
       <Contact />
       <Footer />
       <Toaster />
-    </>
+    </div>
   );
 }
 

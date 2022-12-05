@@ -2,17 +2,29 @@ import React, { useState } from "react";
 import vg from "../assets/vg.png";
 import { BiMailSend } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { addDoc, collection } from "firebase/firestore";
+import { dataBase } from "../firebase";
 import toast from "react-hot-toast";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const handleSubmit = () => {
-    toast.success("Message Sent Successfully");
-    setName("");
-    setEmail("");
-    setMessage("");
+  const handleSubmit = async () => {
+    try {
+      await addDoc(collection(dataBase, "contacts"), {
+        name,
+        email,
+        message,
+      });
+      toast.success("Message Sent Successfully");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      toast.error("Internal Error");
+      console.log(error);
+    }
 
     return false; //for not reload after submit
   };
@@ -36,7 +48,7 @@ const Contact = () => {
         y: -100,
         opacity: 0,
       },
-      transition: { duration: 0.5 },
+      transition: { duration: 0.8 },
     },
   };
   return (

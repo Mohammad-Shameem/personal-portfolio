@@ -13,7 +13,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects">
+    <div id="work">
       <h2>PROJECTS</h2>
       <section>
         <article>
@@ -29,7 +29,7 @@ const Projects = () => {
           >
             {projectsData.length > 0
               ? projectsData.map((i, index) => (
-                  <div key={index} className="projects-item">
+                  <div key={index} className="workItem">
                     <img src={i.img} alt={i.title}></img>
                     <aside>
                       <h3>{i.title}</h3>
