@@ -6,7 +6,6 @@ import Header, { HeaderPhone } from "./Components/Header";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Services from "./Components/Services";
-import SlickSlider from "./Components/SlickSlider";
 import Testimonial from "./Components/Testimonial";
 import Timeline from "./Components/Timeline";
 

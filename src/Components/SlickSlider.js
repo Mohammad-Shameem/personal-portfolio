@@ -21,14 +21,12 @@ const SlickSlider = () => {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    easing: "linear",
   };
   return (
-    <div
-      style={{
-        height: "100vh",
-      }}
-      className="slick-carousel"
-    >
+    <div className="slick-carousel">
       <Slider {...settings}>
         <div>
           <div className="slickslider-2">
@@ -40,7 +38,8 @@ const SlickSlider = () => {
               <p>
                 As a Web Developer, I'm responsible for <br />
                 making and maintaining a website. I can <br />
-                develop your website and make your website fast .
+                develop your website and
+                <br /> make your website fast .
               </p>
             </div>
           </div>

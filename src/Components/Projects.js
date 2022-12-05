@@ -26,6 +26,7 @@ const Projects = () => {
             showIndicators={false}
             showStatus={false}
             showThumbs={false}
+            stopOnHover={false}
           >
             {projectsData.length > 0
               ? projectsData.map((i, index) => (

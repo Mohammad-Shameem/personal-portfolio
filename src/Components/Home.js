@@ -3,6 +3,7 @@ import { animate, motion } from "framer-motion";
 import TypewriterComponent from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import own from "../assets/1669213441208-removebg-preview (2).png"; //etake bole default import
+import SlickSlider from "./SlickSlider";
 const Home = () => {
   const clientCounter = useRef();
   const projectsCounter = useRef();
@@ -126,6 +127,9 @@ const Home = () => {
           <p>Contact</p>
           <span>shameemahmad.sa7@gmail.com</span>
         </article>
+      </div>
+      <div>
+        <SlickSlider />
       </div>
     </>
   );
