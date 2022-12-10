@@ -29,47 +29,49 @@ const Services = () => {
     },
   };
   return (
-    <div id="services">
-      <h2>Services</h2>
-      <section>
-        <motion.div
-          className="serviceBox1"
-          whileInView={animations.whileInView}
-          initial={animations.one}
-        >
-          <h3>45 +</h3>
-          <p>Projects Experience</p>
-        </motion.div>
-        <motion.div
-          className="serviceBox2"
-          whileInView={animations.whileInView}
-          initial={animations.two}
-          transition={{ delay: 0.3 }}
-        >
-          <AiFillIeCircle />
-          <span>Web Development</span>
-        </motion.div>
-        <motion.div
-          className="serviceBox3"
-          whileInView={animations.whileInView}
-          initial={animations.three}
-          transition={{
-            delay: 0.2,
-          }}
-        >
-          <TbWebhook />
-          <span>MERN Stack Development</span>
-        </motion.div>
-        <motion.div
-          className="serviceBox4"
-          whileInView={animations.whileInView}
-          initial={animations.four}
-        >
-          <SiWebmoney />
-          <span>Full Stack Development</span>
-        </motion.div>
-      </section>
-    </div>
+    <>
+      <div id="services">
+        <h2>Services</h2>
+        <section>
+          <motion.div
+            className="serviceBox1"
+            whileInView={animations.whileInView}
+            initial={animations.one}
+          >
+            <h3>45 +</h3>
+            <p>Projects Experience</p>
+          </motion.div>
+          <motion.div
+            className="serviceBox2"
+            whileInView={animations.whileInView}
+            initial={animations.two}
+            transition={{ delay: 0.3 }}
+          >
+            <AiFillIeCircle />
+            <span>Web Development</span>
+          </motion.div>
+          <motion.div
+            className="serviceBox3"
+            whileInView={animations.whileInView}
+            initial={animations.three}
+            transition={{
+              delay: 0.2,
+            }}
+          >
+            <TbWebhook />
+            <span>MERN Stack Development</span>
+          </motion.div>
+          <motion.div
+            className="serviceBox4"
+            whileInView={animations.whileInView}
+            initial={animations.four}
+          >
+            <SiWebmoney />
+            <span>Full Stack Development</span>
+          </motion.div>
+        </section>
+      </div>
+    </>
   );
 };
 
